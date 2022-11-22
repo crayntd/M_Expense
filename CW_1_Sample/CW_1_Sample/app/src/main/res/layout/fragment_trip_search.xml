@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/content_main"
+    tools:context=".ui.trip.TripSearchFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/fmTripSearchTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Search Trip"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/fmTripSearchName"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            android:ems="10"
+            android:hint="Trip Name:"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/fmTripSearchTitle"
+            app:layout_constraintHorizontal_bias="0.467"
+            app:layout_constraintStart_toStartOf="@+id/fmTripSearchTitle"
+            app:layout_constraintTop_toBottomOf="@+id/fmTripSearchTitle" />
+        <EditText
+            android:id="@+id/fmTripSearchDep"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="25dp"
+            android:ems="10"
+            android:hint="Destination Trip:"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.467"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fmTripSearchName" />
+
+        <EditText
+            android:id="@+id/fmTripSearchDate"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="@string/label_start_date"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:inputType="date"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/fmTripSearchDep"
+            app:layout_constraintStart_toStartOf="@+id/fmTripSearchDep"
+            app:layout_constraintTop_toBottomOf="@+id/fmTripSearchDep" />
+
+        <Button
+            android:id="@+id/fmTripSearchButtonCancel"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/custom_button"
+            android:text="@string/label_cancel"
+            app:layout_constraintStart_toStartOf="@+id/fmTripSearchDate"
+            app:layout_constraintTop_toBottomOf="@+id/fmTripSearchDate" />
+
+        <Button
+            android:id="@+id/fmTripSearchButtonSearch"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="25dp"
+            android:text="@string/label_search"
+            android:background="@drawable/custom_button"
+            app:layout_constraintBottom_toBottomOf="@+id/fmTripSearchButtonCancel"
+            app:layout_constraintEnd_toEndOf="@+id/fmTripSearchDate"
+            app:layout_constraintStart_toEndOf="@+id/fmTripSearchButtonCancel"
+            app:layout_constraintTop_toTopOf="@+id/fmTripSearchButtonCancel" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
